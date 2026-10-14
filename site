@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #numero {
+            font-size: 60px;
+            margin: 20px;
+            color: #007bff;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .aumentar {
+            background-color: #28a745;
+        }
+
+        .diminuir {
+            background-color: #dc3545;
+        }
+
+        .resetar {
+            background-color: #007bff;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contador</h1>
+
+        <div id="numero">0</div>
+
+        <button class="aumentar" onclick="aumentar()">
+            Aumentar
+        </button>
+
+        <button class="diminuir" onclick="diminuir()">
+            Diminuir
+        </button>
+
+        <button class="resetar" onclick="resetar()">
+            Resetar
+        </button>
+    </div>
+
+    <script>
+        let numero = 0;
+
+        function atualizarNumero() {
+            document.getElementById("numero").textContent = numero;
+        }
+
+        function aumentar() {
+            numero++;
+            atualizarNumero();
+        }
+
+        function diminuir() {
+            numero--;
+            atualizarNumero();
+        }
+
+        function resetar() {
+            numero = 0;
+            atualizarNumero();
+        }
+    </script>
+
+</body>
+</html>
